@@ -1,0 +1,48 @@
+{
+  "model_name": "Gradient Boosting",
+  "trained_on": 118,
+  "trained_at": "2026-10-01",
+  "sale_dates": [
+    "2025-09-27",
+    "2026-09-28"
+  ],
+  "cv_mape": 0.14620813692544213,
+  "cv_mae": 228312.45399456157,
+  "interval_log_quantiles": [
+    -0.23778415663989297,
+    0.2074059418934121
+  ],
+  "hyperparameters": {
+    "max_depth": 2,
+    "n_estimators": 300
+  },
+  "ranges": {
+    "beds": [
+      1.0,
+      6.0
+    ],
+    "baths": [
+      1.0,
+      4.0
+    ],
+    "parking": [
+      0.0,
+      5.0
+    ],
+    "land_area_m2": [
+      128.0,
+      942.0
+    ]
+  },
+  "segment_counts": {
+    "Bondi_house": 17,
+    "Bondi_unit": 21,
+    "Parramatta_house": 18,
+    "Parramatta_townhouse_villa": 2,
+    "Parramatta_unit": 18,
+    "Penrith_house": 15,
+    "Penrith_townhouse_villa": 3,
+    "Penrith_unit": 24
+  },
+  "sklearn_version": "1.8.0"
+}

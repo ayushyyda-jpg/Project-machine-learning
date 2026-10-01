@@ -1,0 +1,16 @@
+62 Watson Street, Bondi|$3,300,000|22 Sep 2026|auction|3|2|1||House|https://www.domain.com.au/62-watson-street-bondi-nsw-2026-2021108127
+344 Birrell Street, Bondi|$5,860,000|12 Aug 2026|prior to auction|5|3|1||House|https://www.domain.com.au/344-birrell-street-bondi-nsw-2026-2021017171
+9/27 Castlefield Street, Bondi|$1,520,000|16 Jun 2026|prior to auction|2|1|2||House|https://www.domain.com.au/9-27-castlefield-street-bondi-nsw-2026-2020861777
+3 Flood Street, Bondi|$4,001,000|15 Jun 2026|prior to auction|5|2|1|392|House|https://www.domain.com.au/3-flood-street-bondi-nsw-2026-2020823696
+5 Grove Street, Bondi|$3,850,000|10 Jun 2026|private treaty|4|2|1||House|https://www.domain.com.au/5-grove-street-bondi-nsw-2026-2020803354
+38 Philip Street, Bondi|$4,260,000|02 Jun 2026|auction|3|2|||House|https://www.domain.com.au/38-philip-street-bondi-nsw-2026-2020814305
+5/9-11 Ocean Street North, Bondi|$1,445,000|26 May 2026|auction|2|1|1||House|https://www.domain.com.au/5-9-11-ocean-street-north-bondi-nsw-2026-2020801473
+14 Anglesea Street, Bondi|$5,416,000|19 May 2026|auction|6|4|1|415|House|https://www.domain.com.au/14-anglesea-street-bondi-nsw-2026-2020787322
+43 Dudley Street, Bondi|$5,200,000|14 May 2026|prior to auction|4|3|1||House|https://www.domain.com.au/43-dudley-street-bondi-nsw-2026-2020518442
+76 Edward Street, Bondi|$4,050,000|14 May 2026|auction|3|2|1||House|https://www.domain.com.au/76-edward-street-bondi-nsw-2026-2020771966
+68 Anglesea Street, Bondi|$3,260,000|06 May 2026|private treaty|3|1||291|House|https://www.domain.com.au/68-anglesea-street-bondi-nsw-2026-2020679809
+15 Ewell Street, Bondi|$3,150,000|10 Mar 2026|private treaty|3|1|1||House|https://www.domain.com.au/15-ewell-street-bondi-nsw-2026-2020602855
+11 Stephen Street, Bondi|$4,100,000|05 Mar 2026|prior to auction|3|1|1||House|https://www.domain.com.au/11-stephen-street-bondi-nsw-2026-2020604035
+31 Dudley Street, Bondi|$4,370,000|21 Feb 2026|auction|3|2|1|227|House|https://www.domain.com.au/31-dudley-street-bondi-nsw-2026-2020556953
+8 New Street, Bondi|$3,650,000|20 Feb 2026|private treaty|4|2|||House|https://www.domain.com.au/8-new-street-bondi-nsw-2026-2020554882
+2 Denham Street, Bondi|$6,308,000|16 Feb 2026|prior to auction|4|3|3|283|House|https://www.domain.com.au/2-denham-street-bondi-nsw-2026-2020549529

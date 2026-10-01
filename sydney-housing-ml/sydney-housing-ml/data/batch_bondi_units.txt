@@ -1,0 +1,12 @@
+4/11 Flood Street, Bondi|$1,600,000|25 Jun 2026|auction|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/4-11-flood-street-bondi-nsw-2026-2020620392
+4/11 Flood Street, Bondi|$1,600,000|25 Jun 2026|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/4-11-flood-street-bondi-nsw-2026-2020954283
+7/18-20 Penkivil Street, Bondi|$2,350,000|18 Jun 2026|prior to auction|3|2|1||Apartment / Unit / Flat|https://www.domain.com.au/7-18-20-penkivil-street-bondi-nsw-2026-2020886643
+13/7 Denham Street, Bondi|$1,530,000|16 Jun 2026|auction|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/13-7-denham-street-bondi-nsw-2026-2020863806
+304/56a-62 Penkivil Street, Bondi|$2,065,000|10 Jun 2026|auction|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/304-56a-62-penkivil-street-bondi-nsw-2026-2020803799
+6/36-38 Penkivil Street, Bondi|$1,735,000|05 Jun 2026|auction|3|2|1||Apartment / Unit / Flat|https://www.domain.com.au/6-36-38-penkivil-street-bondi-nsw-2026-2020794848
+3/10-12 Fletcher Street, Bondi|$2,000,000|02 Jun 2026|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/3-10-12-fletcher-street-bondi-nsw-2026-2020842516
+17/22-28 Wellington Street, Bondi|$1,520,000|26 May 2026|prior to auction|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/17-22-28-wellington-street-bondi-nsw-2026-2020767269
+15/240-242 Bondi Road, Bondi|$1,450,000|22 May 2026|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/15-240-242-bondi-road-bondi-nsw-2026-2020873708
+3/8 Fletcher Street, Bondi|$1,425,000|14 May 2026|private treaty|2|1|0|80|Apartment / Unit / Flat|https://www.domain.com.au/3-8-fletcher-street-bondi-nsw-2026-2020768532
+6/195-199 Bondi Road, Bondi|$1,000,000|11 May 2026|auction|2|1|0||Apartment / Unit / Flat|https://www.domain.com.au/6-195-199-bondi-road-bondi-nsw-2026-2020623459
+6101/32 Wellington Street, Bondi|$1,280,000|11 May 2026|prior to auction|1|1|0||Apartment / Unit / Flat|https://www.domain.com.au/6101-32-wellington-street-bondi-nsw-2026-2020778427

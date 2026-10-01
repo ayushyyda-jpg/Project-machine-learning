@@ -1,0 +1,42 @@
+suburb|address|price|sold_date|sale_method|beds|baths|parking|area_m2|property_type|url
+Parramatta|2/16 Betts Street|660000|2026-09-12|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/2-16-betts-street-parramatta-nsw-2150-2021061263
+Parramatta|1404/1-3 Valentine Avenue|320000|2026-09-11|private treaty|1|1|0||Apartment / Unit / Flat|https://www.domain.com.au/1404-1-3-valentine-avenue-parramatta-nsw-2150-2021149469
+Parramatta|15/12 Early Street|493000|2026-09-11|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/15-12-early-street-parramatta-nsw-2150-2020980997
+Parramatta|33/68 Great Western Highway|520000|2026-09-11|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/33-68-great-western-highway-parramatta-nsw-2150-2020943564
+Parramatta|505/23 Hassall Street|660000|2026-09-09|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/505-23-hassall-street-parramatta-nsw-2150-2020750030
+Parramatta|89/459-463 Church Street|580000|2026-09-04|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/89-459-463-church-street-parramatta-nsw-2150-2020441602
+Parramatta|8/64-66 Great Western Highway|425000|2026-09-04|private treaty|1|1|1||Apartment / Unit / Flat|https://www.domain.com.au/8-64-66-great-western-highway-parramatta-nsw-2150-2021071261
+Parramatta|1702/45 Macquarie Street|705000|2026-09-04|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/1702-45-macquarie-street-parramatta-nsw-2150-2020659838
+Parramatta|10/4 Peace Lane|570000|2026-09-03|private treaty|2|2|1|108|Apartment / Unit / Flat|https://www.domain.com.au/10-4-peace-lane-parramatta-nsw-2150-2020795902
+Parramatta|9/178 George Street|490000|2026-09-01|private treaty|1|1|0||Apartment / Unit / Flat|https://www.domain.com.au/9-178-george-street-parramatta-nsw-2150-2021070163
+Bondi|7/28-30 Fletcher Street|2450000|2026-09-15|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/7-28-30-fletcher-street-bondi-nsw-2026-2021022114
+Bondi|1/13 Bennett Street|1760000|2026-09-08|auction|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/1-13-bennett-street-bondi-nsw-2026-2021072983
+Bondi|402/56A-62 Penkivil Street|2300000|2026-09-07|private treaty|3|2|2||Apartment / Unit / Flat|https://www.domain.com.au/402-56a-62-penkivil-street-bondi-nsw-2026-2021108930
+Bondi|5601/34 Wellington Street|2600000|2026-09-01|prior to auction|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/5601-34-wellington-street-bondi-nsw-2026-2021048134
+Bondi|8B Castlefield Street|2750000|2026-08-25|prior to auction|3|2|1||Semi-detached|https://www.domain.com.au/8b-castlefield-street-bondi-nsw-2026-2021009555
+Bondi|6 Miller Street|3500000|2026-08-15|auction|3|2|3||House|https://www.domain.com.au/6-miller-street-bondi-nsw-2026-2021001846
+Bondi|1 Miller Street|5400000|2026-08-12|prior to auction|5|4|3|307|House|https://www.domain.com.au/1-miller-street-bondi-nsw-2026-2021021796
+Bondi|3/38 Flood Street|1010000|2026-08-06|auction|2|1|0||Apartment / Unit / Flat|https://www.domain.com.au/3-38-flood-street-bondi-nsw-2026-2021020659
+Bondi|7/162 Bondi Road|650000|2026-08-06|private treaty|1|1|0||Apartment / Unit / Flat|https://www.domain.com.au/7-162-bondi-road-bondi-nsw-2026-2021056607
+Bondi|29/41-47 Ocean Street North|1330000|2026-07-06|prior to auction|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/29-41-47-ocean-street-north-bondi-nsw-2026-2020906830
+Bondi|7/17 Ocean Street North|946000|2026-06-18|auction|1|1|0||Apartment / Unit / Flat|https://www.domain.com.au/7-17-ocean-street-north-bondi-nsw-2026-2020888336
+Penrith|5/90-92 Cox Avenue|820000|2026-08-11|private treaty|3|2|2||Townhouse|https://www.domain.com.au/5-90-92-cox-avenue-penrith-nsw-2750-2021015681
+Penrith|203/1 Markham Avenue|595000|2026-08-10|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/203-1-markham-avenue-penrith-nsw-2750-2021017755
+Penrith|28 Cooper Street|1060000|2026-08-07|private treaty|3|2|1|657|House|https://www.domain.com.au/28-cooper-street-penrith-nsw-2750-2021061853
+Penrith|16 Burrows Street|870000|2026-08-04|private treaty|2|2|1||House|https://www.domain.com.au/16-burrows-street-penrith-nsw-2750-2020979458
+Penrith|8 Cudgee Road|802000|2026-07-29|private treaty|4|2|1|390|House|https://www.domain.com.au/8-cudgee-road-penrith-nsw-2750-2020905014
+Penrith|631/1-39 Lord Sheffield Circuit|539000|2026-07-29|private treaty|1|1|1||Apartment / Unit / Flat|https://www.domain.com.au/631-1-39-lord-sheffield-circuit-penrith-nsw-2750-2020837201
+Penrith|13/72-76 Union Road|585000|2026-07-27|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/13-72-76-union-road-penrith-nsw-2750-2021016996
+Penrith|404/8-10 Fulton Street|652000|2026-07-24|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/404-8-10-fulton-street-penrith-nsw-2750-2021025642
+Penrith|7/209 Derby Street|502500|2026-07-24|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/7-209-derby-street-penrith-nsw-2750-2020837709
+Penrith|3A Rodley Avenue|995000|2026-07-23|private treaty|3|2|1||Duplex|https://www.domain.com.au/3a-rodley-avenue-penrith-nsw-2750-2020956353
+Penrith|53/42-44 Lethbridge Street|605000|2026-07-22|private treaty|2|2|2||Apartment / Unit / Flat|https://www.domain.com.au/53-42-44-lethbridge-street-penrith-nsw-2750-2020878128
+Penrith|107/60 Lord Sheffield Circuit|550000|2026-07-21|private treaty|1|1|1|79|Apartment / Unit / Flat|https://www.domain.com.au/107-60-lord-sheffield-circuit-penrith-nsw-2750-2020922595
+Penrith|513/60 Lord Sheffield Circuit|549000|2026-07-21|private treaty|1|1|1|61|Apartment / Unit / Flat|https://www.domain.com.au/513-60-lord-sheffield-circuit-penrith-nsw-2750-2020806607
+Penrith|206/60 Lord Sheffield Circuit|740000|2026-07-20|private treaty|2|2|1|109|Apartment / Unit / Flat|https://www.domain.com.au/206-60-lord-sheffield-circuit-penrith-nsw-2750-2021047403
+Penrith|301/101D Lord Sheffield Circuit|605000|2026-07-20|private treaty|2|2|1||Apartment / Unit / Flat|https://www.domain.com.au/301-101d-lord-sheffield-circuit-penrith-nsw-2750-2020904538
+Penrith|3/17-19 Haynes Street|449000|2026-07-17|private treaty|1|1|1||Apartment / Unit / Flat|https://www.domain.com.au/3-17-19-haynes-street-penrith-nsw-2750-2021007551
+Penrith|6/171-173 Derby Street|470000|2026-07-14|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/6-171-173-derby-street-penrith-nsw-2750-2020961448
+Penrith|7/53-55 King Street|490000|2026-07-12|private treaty|2|1|1||Apartment / Unit / Flat|https://www.domain.com.au/7-53-55-king-street-penrith-nsw-2750-2020959132
+Penrith|105/81C Lord Sheffield Circuit|675000|2026-07-10|private treaty|2|2|1|149|Apartment / Unit / Flat|https://www.domain.com.au/105-81c-lord-sheffield-circuit-penrith-nsw-2750-2021035787
+Penrith|510/10 Aviators Way|628000|2026-07-10|private treaty|2|2|1|115|Apartment / Unit / Flat|https://www.domain.com.au/510-10-aviators-way-penrith-nsw-2750-2020907551

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sydney Housing Price Estimator</title>
+<style>
+  :root {
+    --ink: #1d2733; --muted: #5f6b7a; --line: #dde3ea; --bg: #f5f7fa; --card: #ffffff;
+    --accent: #2a6f97; --accent-soft: #e6f0f6; --warn: #8a5a00; --warn-soft: #fff4dc; --err: #a32020; --err-soft: #fdeaea;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); }
+  header { background: var(--ink); color: #fff; padding: 22px 0 18px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header h1 { margin: 0; font-size: 22px; font-weight: 650; letter-spacing: .2px; }
+  header p { margin: 4px 0 0; color: #b8c4d1; font-size: 13.5px; }
+  nav { display: flex; gap: 6px; margin: 22px 0 16px; }
+  nav button { border: 1px solid var(--line); background: var(--card); color: var(--muted); padding: 8px 16px; border-radius: 8px; font: inherit; cursor: pointer; }
+  nav button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .grid { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h2 { margin: 0 0 14px; font-size: 16px; }
+  label { display: block; font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
+  select, input { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 7px; font: inherit; color: var(--ink); background: #fff; }
+  .row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .btn { margin-top: 18px; width: 100%; padding: 10px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+  .price { font-size: 40px; font-weight: 700; letter-spacing: -.5px; margin: 2px 0; }
+  .range { color: var(--muted); }
+  .range b { color: var(--ink); }
+  .bar { position: relative; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--accent-soft), var(--accent), var(--accent-soft)); margin: 14px 0 4px; }
+  .bar span { position: absolute; top: -5px; width: 3px; height: 18px; background: var(--ink); border-radius: 2px; }
+  .barlbl { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+  .flag { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 9px 12px; margin-top: 10px; font-size: 13.5px; }
+  .error { background: var(--err-soft); color: var(--err); border-radius: 8px; padding: 9px 12px; margin-bottom: 10px; font-size: 13.5px; }
+  .comps { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .comps h3 { margin: 0 0 8px; font-size: 14px; }
+  .comp { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 13.5px; }
+  .comp a { color: var(--accent); text-decoration: none; }
+  .comp .p { font-weight: 600; white-space: nowrap; }
+  .empty { color: var(--muted); text-align: center; padding: 50px 10px; }
+  .about { font-size: 13px; color: var(--muted); margin-top: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; background: var(--bg); }
+  td.num { text-align: right; white-space: nowrap; }
+  td.c { color: var(--warn); font-size: 12px; max-width: 260px; }
+  .dl { display: inline-block; margin-top: 14px; color: var(--accent); font-weight: 600; text-decoration: none; }
+  .hidden { display: none; }
+  footer { max-width: 1040px; margin: 26px auto 30px; padding: 0 20px; font-size: 12px; color: var(--muted); }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Sydney Housing Price Estimator</h1>
+  <p>Bondi · Parramatta · Penrith &nbsp;|&nbsp; {{ meta.model_name }} trained on {{ meta.trained_on }} sales ({{ meta.sale_dates[0][:7] }} to {{ meta.sale_dates[1][:7] }}) &nbsp;|&nbsp; typical error ±{{ cv_mape }}</p>
+</div></header>
+
+<div class="wrap">
+  <nav>
+    <button id="t1" class="{{ 'on' if tab == 'single' }}" onclick="show('single')">Single property</button>
+    <button id="t2" class="{{ 'on' if tab == 'batch' }}" onclick="show('batch')">Upload CSV</button>
+  </nav>
+
+  <!-- ===================== single property ===================== -->
+  <section id="single" class="{{ 'hidden' if tab != 'single' }}">
+    <div class="grid">
+      <form class="card" method="post" action="/">
+        <h2>Property details</h2>
+        {% set f = form or {"suburb":"Penrith","property_type":"House","beds":3,"baths":2,"parking":1,"area_m2":"","sale_method":"private treaty","sold_month":""} %}
+        <label for="suburb">Suburb</label>
+        <select id="suburb" name="suburb">{% for s in suburbs %}<option {{ 'selected' if f.suburb == s }}>{{ s }}</option>{% endfor %}</select>
+        <label for="property_type">Property type</label>
+        <select id="property_type" name="property_type">{% for t in types %}<option {{ 'selected' if f.property_type == t }}>{{ t }}</option>{% endfor %}</select>
+        <div class="row3">
+          <div><label for="beds">Bedrooms</label><input id="beds" name="beds" type="number" min="0" max="20" value="{{ f.beds }}" required></div>
+          <div><label for="baths">Bathrooms</label><input id="baths" name="baths" type="number" min="0" max="20" value="{{ f.baths }}" required></div>
+          <div><label for="parking">Parking</label><input id="parking" name="parking" type="number" min="0" max="20" value="{{ f.parking }}" required></div>
+        </div>
+        <label for="area_m2">Land size (m²), optional</label>
+        <input id="area_m2" name="area_m2" type="number" min="0" step="1" value="{{ f.area_m2 }}" placeholder="e.g. 550">
+        <div class="hint">Used for houses, townhouses and villas only.</div>
+        <label for="sale_method">Sale method</label>
+        <select id="sale_method" name="sale_method">{% for m in methods %}<option {{ 'selected' if f.sale_method == m }}>{{ m }}</option>{% endfor %}</select>
+        <label for="sold_month">Expected sale month</label>
+        <input id="sold_month" name="sold_month" type="month" value="{{ f.sold_month }}" required>
+        <button class="btn" type="submit">Estimate price</button>
+      </form>
+
+      <div class="card">
+        {% for e in errors if tab == 'single' %}<div class="error">{{ e }}</div>{% endfor %}
+        {% if result %}
+          <div class="range">Estimated sale price · {{ result.segment }}</div>
+          <div class="price">{{ result.price }}</div>
+          <div class="range">Likely range <b>{{ result.low }}</b> to <b>{{ result.high }}</b></div>
+          <div class="bar"><span style="left: {{ result.marker }}"></span></div>
+          <div class="barlbl"><span>10th percentile</span><span>▲ estimate</span><span>90th percentile</span></div>
+          <div class="hint">In cross-validation, 8 in 10 properties sold inside a range of this width around the model's estimate.</div>
+          {% for fl in result.flags %}<div class="flag">⚠ {{ fl }}</div>{% endfor %}
+          <div class="comps">
+            <h3>Most similar sales in the data</h3>
+            {% for c in result.comps %}
+              <div class="comp"><div><a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.address }}</a><br><span class="hint">{{ c.summary }} · sold {{ c.date }}</span></div><div class="p">{{ c.price }}</div></div>
+            {% else %}<div class="hint">No comparable sales of this type in the data.</div>{% endfor %}
+          </div>
+        {% else %}
+          <div class="empty">Enter a property's details and press <b>Estimate price</b>.</div>
+        {% endif %}
+        <div class="about">This is a decision-support estimate from {{ meta.trained_on }} Domain.com.au sales, not a valuation. It cannot see condition, renovations, views, floor level or development potential, which is where its largest errors occurred.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== batch upload ===================== -->
+  <section id="batch" class="{{ 'hidden' if tab != 'batch' }}">
+    <div class="card">
+      <h2>Price many properties from a CSV</h2>
+      <p class="hint" style="font-size:13.5px">Columns: <code>suburb, property_type, beds, baths, parking, area_m2, sale_method, sold_date</code> (area may be blank; dates as YYYY-MM-DD).
+        <a class="dl" style="margin:0" href="/template.csv">Download a template</a></p>
+      <form method="post" action="/batch" enctype="multipart/form-data" style="display:flex;gap:10px;align-items:center;max-width:560px">
+        <input type="file" name="file" accept=".csv" required>
+        <button class="btn" style="margin:0;width:180px" type="submit">Predict prices</button>
+      </form>
+      {% for e in errors if tab == 'batch' %}<div class="error" style="margin-top:14px">{{ e }}</div>{% endfor %}
+      {% if table %}
+        <table>
+          <tr><th>Suburb</th><th>Type</th><th>Bed</th><th>Bath</th><th>Car</th><th>Land m²</th><th>Sale</th><th class="num">Estimate</th><th class="num">Likely range</th><th>Cautions</th></tr>
+          {% for r in table %}
+          <tr><td>{{ r.suburb }}</td><td>{{ r.property_type }}</td><td>{{ r.beds }}</td><td>{{ r.baths }}</td><td>{{ r.parking }}</td>
+              <td>{{ '' if r.area_m2 != r.area_m2 or r.area_m2 is none else r.area_m2|int }}</td><td class="num" style="text-align:left">{{ r.sold_date }}</td>
+              <td class="num"><b>{{ r.predicted_price }}</b></td><td class="num">{{ r.likely_low }} – {{ r.likely_high }}</td><td class="c">{{ r.cautions }}</td></tr>
+          {% endfor %}
+        </table>
+        <a class="dl" download="price_predictions.csv" href="data:text/csv;base64,{{ download }}">⬇ Download results as CSV</a>
+      {% endif %}
+    </div>
+  </section>
+</div>
+
+<footer>SIT307 ML mini project · Gradient Boosting on log(price) · features: suburb, dwelling class, bedrooms, bathrooms, parking, land size, sale method, sale month.</footer>
+
+<script>
+  function show(id) {
+    for (const s of ["single", "batch"]) document.getElementById(s).classList.toggle("hidden", s !== id);
+    document.getElementById("t1").classList.toggle("on", id === "single");
+    document.getElementById("t2").classList.toggle("on", id === "batch");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+suburb,property_type,beds,baths,parking,area_m2,sale_method,sold_date
+Bondi,Apartment / Unit / Flat,2,1,1,,auction,2026-10-15
+Bondi,House,4,2,1,300,auction,2026-10-15
+Parramatta,Apartment / Unit / Flat,2,2,1,,private treaty,2026-10-15
+Parramatta,House,4,2,2,550,private treaty,2026-10-15
+Penrith,Townhouse,3,2,2,,private treaty,2026-10-15
+Penrith,House,7,3,2,650,private treaty,2026-10-15
